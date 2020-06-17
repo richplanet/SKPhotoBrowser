@@ -10,7 +10,7 @@ import Foundation
 
 class SKPagingScrollView: UIScrollView {
     fileprivate let pageIndexTagOffset: Int = 1000
-    fileprivate let sideMargin: CGFloat = 10
+    fileprivate let sideMargin: CGFloat = 2.5
     fileprivate var visiblePages: [SKZoomingScrollView] = []
     fileprivate var recycledPages: [SKZoomingScrollView] = []
     fileprivate weak var browser: SKPhotoBrowser?
@@ -131,6 +131,10 @@ class SKPagingScrollView: UIScrollView {
         
         while recycledPages.count > 2 {
             recycledPages.removeFirst()
+        }
+        
+        guard firstIndex >= 0 && lastIndex >= 0 else {
+            return
         }
         
         for index: Int in firstIndex...lastIndex {

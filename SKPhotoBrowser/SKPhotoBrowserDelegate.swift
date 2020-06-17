@@ -63,6 +63,21 @@ import Foundation
     @objc optional func removePhoto(_ browser: SKPhotoBrowser, index: Int, reload: @escaping (() -> Void))
     
     /**
+     Tells the delegate the user removed a photo, when implementing this call
+     
+     - Parameter browser: reference to the calling SKPhotoBrowser
+     - Parameter index: the index of the removed photo
+     */
+    @objc optional func removePhoto(_ browser: SKPhotoBrowser, index: Int)
+    
+    /**
+     Tells the delegate the user all removed a photo
+     
+     - Parameter browser: reference to the calling SKPhotoBrowser
+     */
+    @objc optional func allRemovePhoto(_ browser: SKPhotoBrowser)
+    
+    /**
      Asks the delegate for the view for a certain photo. Needed to detemine the animation when presenting/closing the browser.
      
      - Parameter browser: reference to the calling SKPhotoBrowser
