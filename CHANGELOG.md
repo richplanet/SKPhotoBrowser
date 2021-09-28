@@ -1,5 +1,13 @@
 # Change Log
 
+## 7.0.0
+### Big Changed
+- Support xcode12.x. swift5.2
+
+#### Updated
+- #371 Update README.md by bcorrea2 
+- #374 Support network gif loading by p36348 
+
 ## 6.1.0
 
 ### Big Changed
