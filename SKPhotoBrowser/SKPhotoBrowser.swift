@@ -384,7 +384,7 @@ public extension SKPhotoBrowser {
             
             photos.remove(at: currentPageIndex)
             if currentPageIndex != 0 {
-                gotoPreviousPage()
+                currentPageIndex -= 1
             }
             paginationView.update(currentPageIndex)
         }
